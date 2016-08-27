@@ -4,7 +4,7 @@ using System.Data;
 using System.Data.Entity;
 using System.Linq;
 using System.Net;
-using System.Web;
+using System.Web; 
 using System.Web.Mvc;
 using DemoBlogWasteOfTimeTeam.Models;
 
@@ -17,7 +17,7 @@ namespace DemoBlogWasteOfTimeTeam.Controllers
         // GET: Posts
         public ActionResult Index()
         {
-            return View(db.Posts.ToList());
+            return View(db.Posts.Include(p=>p.Author).ToList());
         }
 
         // GET: Posts/Details/5
@@ -88,7 +88,7 @@ namespace DemoBlogWasteOfTimeTeam.Controllers
             }
             return View(post);
         }
-
+      
         // GET: Posts/Delete/5
         public ActionResult Delete(int? id)
         {
