@@ -1,19 +1,28 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
+@model IEnumerable<DemoBlogWasteOfTimeTeam.Models.Post>
 
 <div class="jumbotron">
     <h1>Blog</h1>
-    
+
 </div>
 
 <section class="row">
-    <article class="post col-md-4">
-        <h2>Макко текст</h2>
-        <p>
-            НОВ БЛОГГ
-        </p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-    </article>
-    
+    @foreach (var post in Model)
+    {
+        <article class="post col-md-4">
+            <h2>@post.Song</h2>
+            <div>
+                Created on <i>@post.Date</i>
+                @if (@post.Author != null)
+                {
+                    @:by <i>@post.Author.FullName (@post.Author.UserName)</i>
+                }
+            </div>
+            <p>@post.Video</p>
+        </article>
+    }
+
+
 </section>
