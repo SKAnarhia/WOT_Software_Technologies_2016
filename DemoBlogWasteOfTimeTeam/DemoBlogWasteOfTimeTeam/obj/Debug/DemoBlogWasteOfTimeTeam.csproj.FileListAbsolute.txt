@@ -136,7 +136,6 @@ C:\Users\user1\Desktop\WOT_Software_Technologies_2016\DemoBlogWasteOfTimeTeam\De
 C:\Users\user1\Desktop\WOT_Software_Technologies_2016\DemoBlogWasteOfTimeTeam\DemoBlogWasteOfTimeTeam\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\Users\user1\Desktop\WOT_Software_Technologies_2016\DemoBlogWasteOfTimeTeam\DemoBlogWasteOfTimeTeam\obj\Debug\DemoBlogWasteOfTimeTeam.dll
 C:\Users\user1\Desktop\WOT_Software_Technologies_2016\DemoBlogWasteOfTimeTeam\DemoBlogWasteOfTimeTeam\obj\Debug\DemoBlogWasteOfTimeTeam.pdb
-C:\Users\user1\Desktop\WOT_Software_Technologies_2016\DemoBlogWasteOfTimeTeam\DemoBlogWasteOfTimeTeam\obj\Debug\DemoBlogWasteOfTimeTeam.csprojResolveAssemblyReference.cache
 C:\Users\Veni&Mitko\Desktop\WOT_Software_Technologies_2016\DemoBlogWasteOfTimeTeam\DemoBlogWasteOfTimeTeam\bin\roslyn\csc.exe
 C:\Users\Veni&Mitko\Desktop\WOT_Software_Technologies_2016\DemoBlogWasteOfTimeTeam\DemoBlogWasteOfTimeTeam\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
 C:\Users\Veni&Mitko\Desktop\WOT_Software_Technologies_2016\DemoBlogWasteOfTimeTeam\DemoBlogWasteOfTimeTeam\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
