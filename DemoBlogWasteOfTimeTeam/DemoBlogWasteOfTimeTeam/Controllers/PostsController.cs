@@ -4,7 +4,7 @@ using System.Data;
 using System.Data.Entity;
 using System.Linq;
 using System.Net;
-using System.Web; 
+using System.Web;
 using System.Web.Mvc;
 using DemoBlogWasteOfTimeTeam.Models;
 
@@ -18,7 +18,7 @@ namespace DemoBlogWasteOfTimeTeam.Controllers
 
         public ActionResult Index()
         {
-            return View(db.Posts.Include(p=>p.Author).ToList());
+            return View(db.Posts.Include(p => p.Author).ToList());
         }
 
         // GET: Posts/Details/5
@@ -38,7 +38,7 @@ namespace DemoBlogWasteOfTimeTeam.Controllers
 
         // GET: Posts/Create
 
-            [Authorize]
+        [Authorize]
         public ActionResult Create()
         {
             return View();
@@ -65,7 +65,7 @@ namespace DemoBlogWasteOfTimeTeam.Controllers
 
             return View(post);
         }
-        [Authorize(Roles ="Administrator")]
+        [Authorize(Roles = "Administrator")]
         // GET: Posts/Edit/5
         public ActionResult Edit(int? id)
         {
@@ -80,7 +80,7 @@ namespace DemoBlogWasteOfTimeTeam.Controllers
             }
             return View(post);
         }
-        
+
         // POST: Posts/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
@@ -118,7 +118,7 @@ namespace DemoBlogWasteOfTimeTeam.Controllers
 
         // POST: Posts/Delete/5
         [HttpPost, ActionName("Delete")]
-        [Authorize(Roles = "Administrator")] 
+        [Authorize(Roles = "Administrator")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {

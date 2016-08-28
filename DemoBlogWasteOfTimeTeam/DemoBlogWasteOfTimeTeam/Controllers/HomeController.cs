@@ -5,6 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Data.Entity;
+using Microsoft.AspNet.Identity;
 
 namespace DemoBlogWasteOfTimeTeam.Controllers
 {
@@ -31,5 +32,16 @@ namespace DemoBlogWasteOfTimeTeam.Controllers
 
             return View();
         }
+
+        [Authorize]
+         public ActionResult MySongs()
+        {
+            var userId = this.User.Identity.GetUserId();
+            var allCurrentUserSongs = this.db.Posts.Where(p => p.Author.Id == userId).OrderByDescending(p => p.Date).ToList();
+
+            return View(allCurrentUserSongs);
+        }
+
+        
     }
 }
