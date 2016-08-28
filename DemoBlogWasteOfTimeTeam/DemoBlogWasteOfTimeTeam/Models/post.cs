@@ -11,23 +11,24 @@ namespace DemoBlogWasteOfTimeTeam.Models
         [Key]
         public int Id { get; set; }
 
-       
+
         [StringLength(200)]
         public string Song { get; set; }
 
-      
+
         public string Gender { get; set; }
 
-     
+        public Category Category { get; set; }
+
         public string Video { get; set; }
 
 
         [Required]
         public DateTime Date { get; set; }
-   
+
         public string Comment { get; set; }
 
-        
+
         public ApplicationUser Author { get; set; }
     }
 }

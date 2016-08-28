@@ -1,60 +1,52 @@
 ﻿@model IEnumerable<DemoBlogWasteOfTimeTeam.Models.Post>
 
-@{
+    @{
     ViewBag.Title = "MySongs";
-}
-<style>
-iframe{
-max-height:100px !important;
-max-width:200px !important;
-}
-</style>
+    }
 
-<h2>MySongs</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create","Posts")
-AZ SUM SUPER TUPA
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Song)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Gender)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Video)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Date)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Comment)
-        </th>
-        <th></th>
-    </tr>
+    <h2>MySongs</h2>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Song)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Gender)
-        </td>
-        <td>
-            @Html.Raw(item.Video);
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Date)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Comment)
-        </td>
+    <p>
+        @Html.ActionLink("Create New", "Create","Posts")
+        AZ SUM SUPER TUPA
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Song)
+            </th>
+            <th>@Html.DisplayNameFor(model => model.Category)</th>
+            <th>
+                @Html.DisplayNameFor(model => model.Video)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Comment)
+            </th>
 
-    </tr>
-}
+        </tr>
 
-</table>
+        @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Song)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Category)
+            </td>
+            <td>
+                @Html.Raw(item.Video);
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Comment)
+            </td>
+        </tr>
+        }
+
+    </table>

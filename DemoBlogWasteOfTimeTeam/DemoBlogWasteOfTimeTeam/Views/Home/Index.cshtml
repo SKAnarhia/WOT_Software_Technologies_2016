@@ -20,6 +20,8 @@
                 {
                     @:by <i>@post.Author.FullName (@post.Author.UserName)</i>
                 }
+                @Html.Raw(post.Video);
+                <h1>@post.Category</h1>
             </div>
             <p>@post.Video</p>
         </article>

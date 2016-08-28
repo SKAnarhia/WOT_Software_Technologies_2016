@@ -18,7 +18,7 @@ namespace DemoBlogWasteOfTimeTeam.Controllers
 
         public ActionResult Index()
         {
-            return View(db.Posts.Include(p => p.Author).ToList());
+            return View(db.Posts.Include(p => p.Author).OrderByDescending(p=>p.Date).ToList());
         }
 
         // GET: Posts/Details/5
@@ -52,7 +52,7 @@ namespace DemoBlogWasteOfTimeTeam.Controllers
         [Authorize]
         [ValidateInput(false)]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Song,Gender,Video,Comment")] Post post)
+        public ActionResult Create(Post post)
         {
             if (ModelState.IsValid)
             {

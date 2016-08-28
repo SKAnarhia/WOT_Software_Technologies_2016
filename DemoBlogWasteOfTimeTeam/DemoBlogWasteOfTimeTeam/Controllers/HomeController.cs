@@ -15,7 +15,7 @@ namespace DemoBlogWasteOfTimeTeam.Controllers
 
         public ActionResult Index()
         {
-            var latestPosts = db.Posts.Include(p => p.Author).OrderByDescending(p => p.Date).Take(3);
+            var latestPosts = db.Posts.OrderByDescending(p => p.Date).Take(3);
             return View(latestPosts);
         }
 

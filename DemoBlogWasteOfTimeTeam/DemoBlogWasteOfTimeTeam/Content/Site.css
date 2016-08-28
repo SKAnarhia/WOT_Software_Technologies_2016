@@ -37,3 +37,8 @@ textarea {
 .post {
     background: #e6ccb3;
 }
+
+iframe {
+    max-height: 100px !important;
+    max-width: 200px !important;
+}
