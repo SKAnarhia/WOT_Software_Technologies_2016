@@ -3,11 +3,18 @@
 @{
     ViewBag.Title = "MySongs";
 }
+<style>
+iframe{
+max-height:100px !important;
+max-width:200px !important;
+}
+</style>
 
 <h2>MySongs</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create","Posts")
+AZ SUM SUPER TUPA
 </p>
 <table class="table">
     <tr>
@@ -38,7 +45,7 @@
             @Html.DisplayFor(modelItem => item.Gender)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Video)
+            @Html.Raw(item.Video);
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Date)
@@ -46,11 +53,7 @@
         <td>
             @Html.DisplayFor(modelItem => item.Comment)
         </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
-        </td>
+
     </tr>
 }
 
