@@ -3,29 +3,29 @@
 }
 @model IEnumerable<DemoBlogWasteOfTimeTeam.Models.Post>
 
-<div class="jumbotron">
-    <h1>Latest</h1>
-    <p>Which are the latest uploaded videos:</p>
+    <div class="jumbotron">
+        <h1>Latest</h1>
+        <p>Which are the latest uploaded videos:</p>
 
-</div>
-
-<section class="row">
-    @foreach (var post in Model)
-    {
-        <article class="post col-md-4">
-            <h2>@post.Song</h2>
-            <div>
-                Created on <i>@post.Date</i>
-                @if (@post.Author != null)
-                {
+    </div>
+    <div class="container">
+        <div class="row">
+            @foreach (var post in Model)
+            {
+            <div class="col-lg-4 post">
+                <h2>@post.Song</h2>
+                <div>
+                    Created on <i>@post.Date</i>
+                    @if (@post.Author != null)
+                    {
                     @:by <i>@post.Author.FullName (@post.Author.UserName)</i>
-                }
-                @Html.Raw(post.Video);
-                <h1>@post.Category</h1>
+                    }
+                    @Html.Raw(post.Video);
+                    <h1>@post.Category</h1>
+                </div>
+                <p>@post.Video</p>
             </div>
-            <p>@post.Video</p>
-        </article>
-    }
 
-
-</section>
+            }
+        </div>
+    </div>
