@@ -15,9 +15,6 @@ namespace DemoBlogWasteOfTimeTeam.Models
         [StringLength(200)]
         public string Song { get; set; }
 
-
-        public string Gender { get; set; }
-
         public Category Category { get; set; }
 
         public string Video { get; set; }

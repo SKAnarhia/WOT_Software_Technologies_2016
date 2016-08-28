@@ -4,6 +4,7 @@ namespace DemoBlogWasteOfTimeTeam.Migrations
     using Microsoft.AspNet.Identity.EntityFramework;
     using Models;
     using System;
+    using System.Collections.Generic;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
@@ -63,6 +64,25 @@ namespace DemoBlogWasteOfTimeTeam.Migrations
             }
 
             context.SaveChanges();
+
+            var postsFromDb = context.Posts.FirstOrDefault();
+            if (postsFromDb == null)
+            {
+                var user = userManager.Users.FirstOrDefault(x => x.Email == "regular@gmail.com");
+                for (int i = 0; i < 5; i++)
+                {
+                    var post = new Post() { };
+                    post.Category = Category.Rock;
+                    post.Date = DateTime.Now;
+                    post.Comment = "comment " + (i + 1);
+                    post.Song = "song " + (i + 1);
+                    post.Video = @"<iframe width=""420"" height=""315"" src=""https://www.youtube.com/embed/-oNGCoOEUdw"" frameborder=""0"" allowfullscreen></iframe>";
+                    post.Author = user;
+
+                    context.Posts.Add(post);
+                }
+                context.SaveChanges();
+            }
         }
     }
 }
