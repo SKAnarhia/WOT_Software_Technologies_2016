@@ -1,6 +1,17 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
+    background-image: URL("../images/rrrrr.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    min-width: 50%;
+    min-height: 50%;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -13,7 +24,7 @@
    will truncate terms that are too long to fit in the left column 
 */
 .dl-horizontal dt {
-    white-space:normal;
+    white-space: normal;
 }
 
 /* Set width on the form input elements since they're 100% wide by default */
@@ -22,7 +33,7 @@ select,
 textarea {
     max-width: 280px;
 }
-.post{
-    background:#00ffff;
-}
 
+.post {
+    background: #00ffff;
+}
