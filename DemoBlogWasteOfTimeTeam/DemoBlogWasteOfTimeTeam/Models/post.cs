@@ -11,7 +11,7 @@ namespace DemoBlogWasteOfTimeTeam.Models
         [Key]
         public int Id { get; set; }
 
-        
+       
         [StringLength(200)]
         public string Song { get; set; }
 
@@ -27,6 +27,7 @@ namespace DemoBlogWasteOfTimeTeam.Models
    
         public string Comment { get; set; }
 
+        
         public ApplicationUser Author { get; set; }
     }
 }

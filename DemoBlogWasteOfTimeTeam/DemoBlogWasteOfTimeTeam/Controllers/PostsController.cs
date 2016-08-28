@@ -15,6 +15,7 @@ namespace DemoBlogWasteOfTimeTeam.Controllers
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Posts
+
         public ActionResult Index()
         {
             return View(db.Posts.Include(p=>p.Author).ToList());
@@ -36,6 +37,8 @@ namespace DemoBlogWasteOfTimeTeam.Controllers
         }
 
         // GET: Posts/Create
+
+            [Authorize]
         public ActionResult Create()
         {
             return View();
@@ -44,7 +47,9 @@ namespace DemoBlogWasteOfTimeTeam.Controllers
         // POST: Posts/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+
         [HttpPost]
+        [Authorize]
         [ValidateInput(false)]
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "Id,Song,Gender,Video,Comment")] Post post)
@@ -60,7 +65,7 @@ namespace DemoBlogWasteOfTimeTeam.Controllers
 
             return View(post);
         }
-
+        [Authorize(Roles ="Administrator")]
         // GET: Posts/Edit/5
         public ActionResult Edit(int? id)
         {
@@ -75,12 +80,13 @@ namespace DemoBlogWasteOfTimeTeam.Controllers
             }
             return View(post);
         }
-
+        
         // POST: Posts/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateInput(false)]
+        [Authorize(Roles = "Administrator")]
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "Id,Song,Video,Comment")] Post post)
         {
@@ -93,8 +99,9 @@ namespace DemoBlogWasteOfTimeTeam.Controllers
             }
             return View(post);
         }
-      
+
         // GET: Posts/Delete/5
+        [Authorize(Roles = "Administrator")]
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -111,6 +118,7 @@ namespace DemoBlogWasteOfTimeTeam.Controllers
 
         // POST: Posts/Delete/5
         [HttpPost, ActionName("Delete")]
+        [Authorize(Roles = "Administrator")] 
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
