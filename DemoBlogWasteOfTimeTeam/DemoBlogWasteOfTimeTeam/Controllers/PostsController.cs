@@ -46,11 +46,12 @@ namespace DemoBlogWasteOfTimeTeam.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Song,Gender,Video,Date,Comment")] Post post)
+        public ActionResult Create([Bind(Include = "Id,Song,Gender,Video,Comment")] Post post)
         {
             if (ModelState.IsValid)
             {
                 post.Author = db.Users.FirstOrDefault(u => u.UserName == User.Identity.Name);
+                post.Date = DateTime.Now;
                 db.Posts.Add(post);
                 db.SaveChanges();
                 return RedirectToAction("Index");
