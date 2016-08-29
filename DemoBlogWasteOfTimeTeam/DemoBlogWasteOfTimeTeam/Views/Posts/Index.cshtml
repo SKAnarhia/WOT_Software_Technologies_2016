@@ -1,10 +1,10 @@
 ﻿@model IEnumerable<DemoBlogWasteOfTimeTeam.Models.Post>
 
     @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Posts";
     }
 
-    <h2>Index</h2>
+    <h2>"Best Song Ever" Posts</h2>
 
     <p>
         @Html.ActionLink("Create New", "Create")
@@ -47,7 +47,7 @@
                 @Html.DisplayFor(modelItem => item.Date)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Comment)
+                @DemoBlogWasteOfTimeTeam.Classes.Utils.CutText(item.Comment)
             </td>
             <td>
                 @if (item.Author==null)

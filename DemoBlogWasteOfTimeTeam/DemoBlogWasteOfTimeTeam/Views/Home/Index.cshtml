@@ -13,7 +13,7 @@
             @foreach (var post in Model)
             {
             <div class="col-lg-4 post">
-                <h2>@post.Song</h2>
+                <h3><a href="/Posts/Details/@post.Id">@DemoBlogWasteOfTimeTeam.Classes.Utils.CutText(post.Song, 30)</a></h3>
                 <div>
                     Created on <i>@post.Date</i>
                     @if (@post.Author != null)
@@ -23,7 +23,7 @@
                     @Html.Raw(post.Video);
                     <h1>@post.Category</h1>
                 </div>
-                <p>@post.Video</p>
+             
             </div>
 
             }

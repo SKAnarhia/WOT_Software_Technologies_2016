@@ -23,6 +23,7 @@ namespace DemoBlogWasteOfTimeTeam.Models
         [Required]
         public DateTime Date { get; set; }
 
+        [DataType(DataType.MultilineText)]
         public string Comment { get; set; }
 
 
