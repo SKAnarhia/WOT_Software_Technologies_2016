@@ -28,7 +28,7 @@
             <div class="col-md-10">
                 @Html.EnumDropDownListFor(
                 model => model.Category,
-                "Select My Type",
+               
                 new { @class = "form-control" })
 
                 @Html.ValidationMessageFor(model => model.Category, "", new { @class = "text-danger" })

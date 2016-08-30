@@ -34,13 +34,25 @@ textarea {
 iframe {
     max-height: 100px !important;
     max-width: 200px !important;
-
 }
-footer{
-    color:red;
-    position: fixed ;
+
+footer {
+    color: red;
+    position: fixed;
     bottom: 0;
     left: 50px;
     right: 0;
-    height:65px;
+    height: 65px;
 }
+
+li:hover {
+    font-size:large;
+    background-color: red;
+}
+.jumbotron{
+    border-radius:25px;
+    border-bottom-style:groove;
+    border-right-style:groove;
+   background: rgba(0, 0,0, 0.2);
+}
+

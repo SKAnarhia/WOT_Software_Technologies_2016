@@ -4,61 +4,85 @@
 
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
- 
+
     <title>@ViewBag.Title - BSE</title>
-    
-         @Styles.Render("~/Content/css")
 
-         @Scripts.Render("~/bundles/modernizr")
+    @Styles.Render("~/Content/css")
 
-</head> 
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
 <body>
-  
-        <div class="navbar navbar-inverse navbar-fixed-top">
-            <div class="container">
 
-                <div class="navbar-header">
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
 
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button><span href="/#" class="navbar-brand"><img src="~/images/BSE_guitar-01.png"
-     style="position:absolute; top:4px; left:30px; width:70px; height:44px; border:none;" /> </span>
-                    
+            <div class="navbar-header">
 
-                </div>
-                <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <li>@Html.ActionLink("Latest", "Index", "Home")</li>
-                        <li>@Html.ActionLink("About", "About", "Home")</li>
-                        <li>@Html.ActionLink("Songs", "Index", "Posts")</li>
-                        <li>@Html.ActionLink("Add New", "Create", "Posts")</li>
-                        <li>@Html.ActionLink("My Songs  ", "MySongs", "Home")</li>
-                    </ul>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button><span href="/#" class="navbar-brand">
+                    <img  src="~/images/BSE_guitar-01.png"
+                         style="position:absolute; top:4px; left:30px; width:70px; height:44px; border:none;" />
+                </span>
 
-                    @Html.Partial("_LoginPartial")
-                </div>
+
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul   class="nav navbar-nav">
+                    <li>@Html.ActionLink("Latest", "Index", "Home")</li>
+                    <li>@Html.ActionLink("About", "About", "Home")</li>
+                    <li>@Html.ActionLink("Songs", "Index", "Posts")</li>
+                    <li>@Html.ActionLink("Add New", "Create", "Posts")</li>
+                    <li>@Html.ActionLink("My Songs  ", "MySongs", "Home")</li>
+
+                </ul>
+                <script>
+                    function mouseOver() {
+                        document.getElementById("demo").style.color ="red";
+                    }
+
+                    function mouseOut() {
+                        document.getElementById("demo").style.color = "black";
+                    }
+                </script>
+
+                @Html.Partial("_LoginPartial")
+               
 
             </div>
 
-
-        </div>
-        <div class="container body-content">
-
-            @RenderBody()
-
-
-            <hr />
-
-            <footer>
-                <p>&copy; @DateTime.Now.Year - Waste Of Time</p>
-            </footer>
         </div>
 
-        @Scripts.Render("~/bundles/jquery")
-        @Scripts.Render("~/bundles/bootstrap")
-        @RenderSection("scripts", required: false)
+
+    </div>
+    <div class="container body-content">
+
+        @RenderBody()
+
+
+        <hr />
+
+        <footer>
+            <p>&copy; @DateTime.Now.Year - Waste Of Time</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+
+    <script>
+                    function mouseOver() {
+                        document.getElementById("demo").style.color ="red";
+                    }
+
+                    function mouseOut() {
+                        document.getElementById("demo").style.color = "black";
+                    }
+    </script>   
 
 </body>
 </html>
