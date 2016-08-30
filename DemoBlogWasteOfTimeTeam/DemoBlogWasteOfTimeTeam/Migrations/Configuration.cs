@@ -103,7 +103,7 @@ namespace DemoBlogWasteOfTimeTeam.Migrations
                 post4.Date = DateTime.Now;
                 post4.Comment = "What happened with the passion?";
                 post4.Song = "H2O - What Happened";
-                post4.Video = @"<iframe width=""420"" height=""315"" src=""https://www.youtube.com/embed/c1kgZLgWpb"" frameborder=""0"" allowfullscreen></iframe>";
+                post4.Video = @"<iframe width=""420"" height=""315"" src=""https://www.youtube.com/embed/c1kgZLgWpb8"" frameborder=""0"" allowfullscreen></iframe>";
                 post4.Author = user;
 
                 context.Posts.Add(post4);
