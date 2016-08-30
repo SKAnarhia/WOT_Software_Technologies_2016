@@ -8,7 +8,7 @@ namespace DemoBlogWasteOfTimeTeam.Models
 
     public enum Category
     {
-        No = 0,
+        Other = 0,
         Rock = 1,
         Ska = 2,
         Metal = 3,

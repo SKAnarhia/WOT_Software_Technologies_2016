@@ -40,9 +40,9 @@ footer {
     color: red;
     position: fixed;
     bottom: 0;
-    left: 50px;
+    left: 2%;
     right: 0;
-    height: 65px;
+    height: 6%;
 }
 
 li:hover {
